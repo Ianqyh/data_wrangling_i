@@ -46,3 +46,22 @@ Here's `skimer`:
 skimr::skim(litters_df)
 ```
 
+## Aruguments in `read_csv`
+
+```{r}
+litters_df = 
+  read_csv(
+    "data/FAS_litters.csv",
+    skip = 5,
+    col_names = FALSE,
+    na = "Low8")
+```
+
+
+## Parsing columns
+
+```{r}
+litters_data = read_csv(file = "./data/FAS_litters.csv",
+  col_types = cols(`GD of Birth` = col_integer())
+)
+```
